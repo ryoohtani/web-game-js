@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 60px 60px 50px 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    text-align: center;
+}
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gender-label {
+    font-weight: bold;
+}
+.gender-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px 10px 30px;
+}
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.required {
+    background-color: #fee;
+    color: #f33;
+    padding: 3px;
+    font-size: .9em;
+    font-weight: bold;
+    margin-left: .3em;
+}

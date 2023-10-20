@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Membership</title>
+        <link rel="stylesheet" href="../css/signup.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>create an account</h1>
+            <p>To use this site, please fill in the required information in the form.</p>
+            <form action="#" method="post">
+
+                <label for="name">Name<span class="required">Required</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="mail">Email address<span class="required">Required</span></label>
+                <input type="email" id="mail" name="mail" required>
+
+                <label for="password">Password<span class="required">Required</span></label>
+                <input type="password" name="password" required>
+
+                <div class="gender-label">gender</div>
+                <div class="gender-options">
+                    <label for="man"  ><input type="radio" id="man"   name="gender" value="man" required>Man</label>
+                    <label for="woman"><input type="radio" id="woman" name="gender" value="woman" required>Woman</label>
+                    <label for="non-binary"><input type="radio" id="non-binary" name="gender" value="non-binary" required>Non-binary</label>
+                </div>
+
+                <label for="birth">Birth month</label>
+                <select id="birth" name="birth" required>
+                    <option value="1" >Jan</option>
+                    <option value="2" >Feb</option>
+                    <option value="3" >Mar</option>
+                    <option value="4" >Apr</option>
+                    <option value="5" >May</option>
+                    <option value="6" >Jun</option>
+                    <option value="7" >Jul</option>
+                    <option value="8" >Aug</option>
+                    <option value="9" >Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+                <button type="submit" class="button">Send data</button>
+            </form>
+        </div>
+    </body>
+</html>
