@@ -19,7 +19,7 @@ docker compose up -d
 ```
 * コンテナにアクセス(python-algorithmsはコンテナ名)
 ```
-docker exec -it webgame-js bash
+docker exec -it webgame bash
 ```
 
 *javascriptのコマンド*
@@ -92,4 +92,3 @@ git checkout main
 ```
 git merge gamejs/main
 ```
----
