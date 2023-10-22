@@ -1,25 +1,136 @@
 body {
-    background-color: #f0f0f0;
+    margin: 0 auto;
+    width: 1200px;
     padding: 10px;
-    font-size: 14px;
-    color: #666;
 }
 
-header {
-    background-color: rgba(26,14,240, .5);
-    padding: 10px;
-    color: #fff;
+.container {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+    background-color: #FCE1E8;
 }
 
 header h1 {
     margin: 0;
+    padding: 10px;
     font-size: 24px;
-    font-weight: normal;
+    text-align: center;
+    background-color: rgba(26,14,240, .5);
+    color: #fff;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+section h2 {
+    text-align: center;
+    padding: 10px;
+    animation: sway 2s infinite ease-in-out;
+}
+
+.toroku {
     text-align: center;
 }
 
-.container {
-    width: 1000px;
-    margin: 0 auto;
+.toroku p {
+    padding: 10px;
+    animation: invertColors 3s infinite;
+    margin: 0 360px 50px 360px;
+}
+
+@keyframes invertColors {
+    0% {
+      background-color: #FCE1E8;
+      color: #aa00ff;
+    }
+    50% {
+      background-color: rgba(26,14,240, .5);
+      color: #333;
+    }
+    100% {
+      background-color: #FCE1E8;
+      color: #aa00ff;
+    }
+  }
+
+.toroku button {
+    background-color: rgba(26,14,240, .5);
+    color: black;
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;   
+}
+
+.toroku button:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: #aa00ff;
+    color: white;
+}
+
+.gamelist h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.gamelist ol {
+    margin: 0 0 0 300px;   
+    /* リストを左右に配置する */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
+.infos {
+    /* 要素を横に並べることができる */
+    display: flex;
+    /* 上記にすると縦に伸びるからそれを直すのが以下 */
+    align-items: center;
+    margin: 0 0 0 400px;
+}
+
+.infos p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 10px 0 0;
+}
+
+.infos span {
+    background-color: #e35a4d;
+    padding: 3px 5px;
+    color: #fff;
+    font-size: .6em;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(26,14,240, .5);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
 }
+/* 
+.overlay-image {
+    左上の起点に合わせるという意味
+    position: absolute;
+    画像を上にビタと、画像を左にビタ
+    top: 0;
+    left: 0;
+    要素を下にする
+    z-index: -1;
+    要素を透明にする
+    opacity: 0.7;
+    ページをスクロールしても背景は固定
+    background-attachment: fixed;
+    元画像の縦横比は保持して、要素をちょうどよく覆うサイズにする
+    background-size: cover;
+    縦横のサイズ合わせ 
+} */
