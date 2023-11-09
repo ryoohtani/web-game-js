@@ -14,10 +14,9 @@ RUN apt-get update && apt-get install -y vim less sudo tree
 # bunのインストール
 RUN curl -fsSL https://bun.sh/install | bash
 
-ENV BUN_PORT=8030
+ENV BUN_PORT=3000
 ENV LANG=C.UTF-8
 ENV TZ=Asia/Tokyo
 
-EXPOSE 8030
+EXPOSE 3000
 # RUN npm install --global yarn
-# EXPOSE 3000 8030
