@@ -50,6 +50,28 @@ bun ファイル名.js
 bun run ファイル名.js
 ```
 
+* reactの初期実行コマンド
+```
+npx create-react-app react-ts-app --template typescript
+※TS不要ならreact-ts-appよりあとは不要
+react-ts-appは好きな名前でOK
+```
+
+* reactの実行コマンド
+```
+yarn start or npm start
+```
+
+* ESLintのインストール
+```
+npm install eslint --save-dev
+```
+
+* ESLintの初期設定
+```
+npm init @eslint/config
+```
+
 
 *gitコマンド*
 
