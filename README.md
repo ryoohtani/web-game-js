@@ -72,7 +72,6 @@ npm install eslint --save-dev
 npm init @eslint/config
 ```
 
-
 *gitコマンド*
 
 * ローカルリポジトリの新規作成
