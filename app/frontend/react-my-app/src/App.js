@@ -1,29 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { List } from "./List";
 import { Form } from "./Form";
+import { getLanguages } from "./const/languages";
 
 function App() {
-  const [description, setDescription] = useState('クリック前の表示');
-  const [tab, setTab] = useState('list');
 
-  const changeDescription = () => {
-    setDescription('クリック後の表示です。');
+  const [tab, setTab] = useState('list');
+  const [langs, setLangs] = useState([]);
+
+  useEffect(() => {
+    console.log('App.js:useEffect');
+    fatchLanguages();
+  }, [langs])
+
+  const fatchLanguages = async () => {
+    const languages = await getLanguages();
+    setLangs(languages);
+  }
+
+  const addLang = (lang) => {
+    setLangs([...langs, lang]);
+    // タブ切り替え
+    setTab('list');
   }
 
   return (
     <div>
         <header>
           <ul>
-            <li>リスト</li>
-            <li>フォーム</li>
+            <li onClick={() => setTab('list')}>リスト</li>
+            <li onClick={() => setTab('form')}>フォーム</li>
           </ul>
         </header>
         <hr/>
-      { description }
-      ゼロから始めるreact
-        <List title="取り扱い言語一覧" />
-        <Form />
-        <button onClick = {changeDescription}>ボタン</button>
+
+      {
+        tab === 'list' ? <List langs = {langs}/>:<Form onAddLang = {addLang} />
+      }
+
     </div>    
   );
 }
