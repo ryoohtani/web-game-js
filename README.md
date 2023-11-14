@@ -72,6 +72,16 @@ npm install eslint --save-dev
 npm init @eslint/config
 ```
 
+* TailwindCssのインストール(react-my-app内に作成)
+```
+yarn add -D tailwindcss postcss autoprefixer
+```
+
+* TailwindCssの初期化(react-my-app内に作成)
+```
+yarn tailwindcss init -p
+```
+
 *gitコマンド*
 
 * ローカルリポジトリの新規作成
