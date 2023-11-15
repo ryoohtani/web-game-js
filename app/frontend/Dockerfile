@@ -10,6 +10,9 @@ RUN apt-get update
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # リナックスコマンドのパッケージインストール
 RUN apt-get update && apt-get install -y vim less sudo tree
+
+RUN npm install -g npm@10.2.3
+
 # 軽量系のnodeをインストールするなら以下のコメント外す
 # RUN npm install --global yarn
 
