@@ -52,9 +52,9 @@ bun run ファイル名.js
 
 * reactの初期実行コマンド
 ```
-npx create-react-app react-ts-app --template typescript
-※TS不要ならreact-ts-appよりあとは不要
-react-ts-appは好きな名前でOK
+npx create-react-app react-my-app --template typescript
+※TS不要ならreact-my-appよりあとは不要
+react-my-appは好きな名前でOK
 ```
 
 * reactの実行コマンド
@@ -70,6 +70,18 @@ npm install eslint --save-dev
 * ESLintの初期設定
 ```
 npm init @eslint/config
+```
+
+* jestのインストール
+```
+npm i -D eslint-plugin-jest
+※.eslintrc.jsのpluginsに右を入れる、'jest'
+```
+
+* コード修正(fix設定)
+```
+npx eslint --fix react-my-app/src/ファイル名
+.jsをts*にするとTS対応できる
 ```
 
 * TailwindCssのインストール(react-my-app内に作成)
