@@ -84,6 +84,11 @@ npx eslint --fix react-my-app/src/ファイル名
 .jsをts*にするとTS対応できる
 ```
 
+* prettierのインストール
+```
+npm install -D prettier
+```
+
 * TailwindCssのインストール(react-my-app内に作成)
 ```
 yarn add -D tailwindcss postcss autoprefixer
