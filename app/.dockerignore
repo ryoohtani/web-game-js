@@ -1,0 +1,2 @@
+frontend/react-my-app/node_modules
+# .dockerignoreとはビルドする際に、不要なファイルやフォルダのパスを記載すれば、コピーされないからビルドは早くなる
